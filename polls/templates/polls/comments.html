@@ -1,0 +1,28 @@
+{% extends "polls/base.html" %}
+
+{% load bootstrap4 %}
+{% bootstrap_css %}
+
+{% block title %}
+<div style="text-align: center;">
+<h2>Leave a comment</h2>
+</div>
+{% endblock %}
+
+<body>
+{% block content %}
+<div class="container">
+    <div class="form-group" width="50">
+        <form method="POST" action="list" >
+            {% csrf_token %}
+            {{ form }}
+            {% buttons %}
+            <br>
+          <button type="submit" class="btn btn-primary  btn-lg">Submit</button>
+            {% endblock buttons %}
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+</body>

@@ -1,0 +1,36 @@
+{% load bootstrap4 %}
+{% bootstrap_css %}
+
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/polls">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/polls/1/vote">Poll</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/polls/comments">Comments</a>
+        </li>
+          <li class="nav-item">
+              <a class="nav-link" href="/polls/comments/list">Comments List</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+{% block title %}
+{% endblock %}
+{% block content %}
+{% endblock %}
+<footer>
+<div class= "navbar navbar-inverse navbar-static-bottom" role="navigation">
+    <div class="navbar-text pull-left">
+    </div>
+    <div class="navbar-text pull-left">
+    &copy; Natalie Zhang, 2020
+    </div>
+</div>
+</footer>

@@ -1,0 +1,27 @@
+{% extends "polls/base.html" %}
+
+{% load bootstrap4 %}
+{% bootstrap_css %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="row h-100">
+   <div class="col-sm-12 my-auto">
+           <div class="text-center">
+               <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+               {% if latest_question_list %}
+               <ul class="pagination justify-content-center">
+                   {% for question in latest_question_list %}
+                   <li class="page-item"><a class="page-link" href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+                   {% endfor %}
+               </ul>
+           </div>
+   </div>
+</div>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+{% endblock %}
+

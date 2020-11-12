@@ -1,0 +1,19 @@
+{% extends "polls/base.html" %}
+
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% block title %}
+<div style="text-align: center;">
+    <h2>List of Comments</h2>
+</div>
+{% endblock %}
+{% block content %}
+<div class="pagination justify-content-center">
+    <ul text-align="center">
+        {% for comment in comments_list %}
+        <li>{{ comment.name }} : {{comment.comment_text}}</li>
+        <br>
+    {% endfor %}
+    </ul>
+</div>
+{% endblock %}
